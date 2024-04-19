@@ -9,6 +9,10 @@ app.use(express.json())
 
 app.use('/student', studentRouet)
 
+app.get('/', (req, res) => {
+    res.send({message : "Hello"})
+})
+
 app.use('*',(req,res)=>{
     res.send({message:"404 Page not found"})
 })
