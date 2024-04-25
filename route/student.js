@@ -25,10 +25,10 @@ router.get('/', async (req, res) => {
         let student =  await studentmodel.find()
         res.send({ students: student });
     } catch (e) {
-        res.send({ error: e });
+        // res.send({ error: e });
+        res.send({message : "hiiii......"})
     }
 
-    // res.send({message : "hiiii......"})
 })
 
 module.exports = router;
