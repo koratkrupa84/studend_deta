@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const studentmodel = require('../model/student');
-// const { error } = require('console');
+const { error } = require('console');
 
 // Add routes
 router.post('/add', async (req, res) => {
@@ -22,8 +22,8 @@ router.post('/add', async (req, res) => {
 router.get('/', async (req, res) => {
 
     try {
-        let studentList =  [1, 2, 3, 4]// await studentmodel.find()
-        res.send({ student: studentList });
+        let student =  await studentmodel.find()
+        res.send({ students: student });
     } catch (e) {
         res.send({ error: e });
     }
