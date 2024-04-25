@@ -7,7 +7,7 @@ const studentSchema = mongoose.Schema({
     password:{type: String},
     fullName:{type: String },
     age:{type: Number},  
-    gender:{type: String},  // male or female
+    gender:{type: String}  // male or female
 })
 
 
