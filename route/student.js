@@ -1,8 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const studentmodel = require('../model/student');
-const { error } = require('console');
-const student = require('../model/student');
+// const { error } = require('console');
 
 // Add routes
 router.post('/add', async (req, res) => {
