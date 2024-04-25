@@ -8,7 +8,7 @@ router.post('/add', async (req, res) => {
 
     try {
 
-        const result = await studentmodel(req.body).save();
+        await studentmodel(req.body).save();
         res.send({ message: "student added...." });
 
     } catch (e) {
