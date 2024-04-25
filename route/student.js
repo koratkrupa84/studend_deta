@@ -22,7 +22,7 @@ router.post('/add', async (req, res) => {
 router.get('/', async (req, res) => {
 
     try {
-        // let student =  await studentmodel.find()
+        let student =  await studentmodel.find()
         // res.send({ students: student });
 
         res.send({message : "hiiii"})
