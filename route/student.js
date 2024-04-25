@@ -20,14 +20,15 @@ router.post('/add', async (req, res) => {
 
 
 router.get('/', async (req, res) => {
-    // try {
-    //     let studentList = await studentmodel.find();
-    //     res.send({ student: studentList });
-    // } catch (e) {
-    //     res.send({ error: e });
-    // }
 
-    res.send({message : "hiiii......"})
+    try {
+        let studentList = await studentmodel.find()
+        res.send({ student: studentList });
+    } catch (e) {
+        res.send({ error: e });
+    }
+
+    // res.send({message : "hiiii......"})
 })
 
 module.exports = router;
