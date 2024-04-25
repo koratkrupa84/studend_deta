@@ -22,7 +22,7 @@ router.post('/add', async (req, res) => {
 router.get('/', async (req, res) => {
 
     try {
-        let studentList = await studentmodel.find()
+        let studentList =  [1, 2, 3, 4]// await studentmodel.find()
         res.send({ student: studentList });
     } catch (e) {
         res.send({ error: e });
