@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const studentmodel = require('../model/student');
-const { error } = require('console');
+
 
 // Add routes
 router.post('/add', async (req, res) => {
@@ -23,12 +23,10 @@ router.get('/', async (req, res) => {
 
     try {
         let student =  await studentmodel.find()
-        // res.send({ students: student });
+        res.send({ students: student });
 
-        res.send({message : "hiiii"})
     } catch (e) {
-        // res.send({ error: e });
-        res.send({message : "hiiii......"})
+        res.send({ error: e });
     }
 
 })

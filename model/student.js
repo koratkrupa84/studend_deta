@@ -6,9 +6,9 @@ const studentSchema = mongoose.Schema({
     phone_no : {type: String},
     password:{type: String},
     fullName:{type: String },
-    age:{type: Number},  
-    gender:{type: String}  // male or female
+    age: Number,  
+    gender: String  // male or female
 })
 
 
-module.exports = mongoose.model('students',studentSchema)
+module.exports = mongoose.model('students', studentSchema)
