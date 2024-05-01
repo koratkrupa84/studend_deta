@@ -3,7 +3,7 @@ const express = require('express')
 // const studentRouet = require('./route/student')
 const app = express()
 
-dbconnect()
+// dbconnect()
 
 app.use(express.json())
 
