@@ -1,9 +1,9 @@
 const express = require('express')
-// const dbconnect = require('./dbconfing')
+const dbconnect = require('./dbconfing')
 // const studentRouet = require('./route/student')
 const app = express()
 
-// dbconnect()
+dbconnect()
 
 app.use(express.json())
 
